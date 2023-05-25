@@ -1,51 +1,139 @@
-<!DOCTYPE html>
+{% load static %} {% block content %}
 
-<html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
-		<title>MEDICALMINDS</title>
+<head>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    crossorigin="anonymous"
+  />
 
-		<style media="screen">
-			.jumbotron {
-				margin-top: 0px;
-				margin-bottom: 0px;
-			}
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-			.jumbotron h1 {
-				text-align: center;
-			}
+    * {
+      padding: 0%;
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+    }
 
-			.alert {
-				margin: 0px;
-			}
-		</style>
-	</head>
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
 
-	<body>
-		{% include "hospital/navbar.html" %}
-		<br />
-		<br />
+    .jumbotron h1 {
+      text-align: center;
+    }
 
-		<div class="jumbotron" style="margin-top: 0px; margin-bottom: 0px">
-			<h1 class="display-4">Hello {{request.user.first_name}}</h1>
-			<p class="lead">
-				Your Account is not approved till now <br /><br />Our Team is checking
-				your profile <br /><br />
-				Soon your Account will be confirmed !!!
-			</p>
-			<hr class="my-4" />
-			<p>Check Later</p>
-			<p class="lead">
-				<a class="btn btn-primary btn-lg" href="/logout" role="button"
-					>Logout For Now</a
-				>
-			</p>
-		</div>
+	.lead {
+		margin-left: 600px;
+	}
 
-		{% include "hospital/footer.html" %}
-	</body>
-</html>
+    .alert {
+      margin: 0px;
+    }
+
+    .container {
+      height: 100vh;
+      width: 100%;
+      background: linear-gradient(to right, #93c572 70%, #c8ebb1 30%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .wave {
+      position: absolute;
+      top: 0;
+      right: 30%;
+    }
+
+    nav {
+      width: 90%;
+      margin: auto;
+      padding-top: 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      display: flex;
+      list-style-type: none;
+    }
+
+    nav ul li {
+      margin: 0 5px;
+    }
+
+    nav ul a {
+      text-decoration: none;
+      padding: 0.3rem 1.3rem;
+      font-size: 17px;
+      font-weight: bold;
+      color: #494234;
+      position: relative;
+      z-index: 1;
+    }
+
+    nav ul a::after {
+      content: "";
+      width: 0%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0px;
+      border-radius: 20px;
+      background-color: #c8ebb1;
+      z-index: -1;
+      transition: 0.5s;
+    }
+
+    nav ul a:hover:after {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="wave">
+      <img src="{% static "images/index/bg.png" %}" alt=""/>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/aboutus">About</a></li>
+        <li><a href="/contactus">Contact</a></li>
+        <li><a href="/adminlogin">Admin</a></li>
+        <li><a href="/doctorlogin">Doctor</a></li>
+        <li><a href="/patientlogin">Patient</a></li>
+      </ul>
+      <img src="{% static "images/index/logo-new.png" %}" alt=""/>
+    </nav>
+
+    <div class="jumbotron">
+      <h1 class="display-4">Hello {{request.user.first_name}}</h1>
+      <p class="lead">
+        Your Account is not approved till now <br /><br />Our Team is checking
+        your profile <br /><br />
+        Soon your account will be confirmed !!!
+		<br>
+		Check Later
+      </p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="/logout" role="button"
+          >Logout For Now</a
+        >
+      </p>
+    </div>
+  </div>
+</body>
+
+{% endblock content %}
