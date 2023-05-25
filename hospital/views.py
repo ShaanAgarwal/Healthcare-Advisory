@@ -720,6 +720,7 @@ model_stroke = load('./savedmodel/stroke_model.joblib')
 model_fetal = load('./savedmodel/fetal_model.joblib')
 model_lung = load('./savedmodel/lung_model.joblib')
 model_diabetes = load('./savedmodel/diabetes_model.joblib')
+model_depression = load('./savedmodel/depression_model.joblib')
 
 @login_required(login_url='patientlogin')
 @user_passes_test(is_patient)
@@ -802,6 +803,39 @@ def heart_disease_prediction(request):
             y_pred = 'The Person Has Heart Disease'
         return render(request, 'hospital/heart-disease-prediction.html', {'result' : y_pred})
     return render(request, 'hospital/heart-disease-prediction.html', )
+
+@login_required(login_url='patientlogin')
+@user_passes_test(is_patient)
+def depression_prediction(request):
+    if request.method == 'POST':
+        sex = (request.POST['sex'])
+        if sex == "Male":
+            sex = 1
+        else:
+            sex = 0
+        age = float(request.POST['age'])
+        married = (request.POST['married'])
+        if married == "Yes":
+            married = 1
+        else:
+            married = 0
+        number_of_children = float(request.POST['number_of_children'])
+        total_members = float(request.POST['total_members'])
+        asset_value = float(request.POST['asset_value'])
+        living_expenses = float(request.POST['living_expenses'])
+        income = (request.POST['income'])
+        if income == "Yes":
+            income = 1
+        else:
+            income = 0
+        investment = float(request.POST['investment'])
+        y_pred = model_depression.predict([[sex, age, married, number_of_children, total_members, asset_value, living_expenses, income, investment]])
+        if y_pred[0] == 0:
+            y_pred = 'You are not suffering from depression.'
+        else:
+            y_pred = 'You are suffering from depression.'
+        return render(request, 'hospital/depression-prediction.html', {'result' : y_pred})
+    return render(request, 'hospital/depression-prediction.html', )
 
 @login_required(login_url='patientlogin')
 @user_passes_test(is_patient)

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depression Prediction</title>
+
+    <style>
+
+        body {
+            background-color: pink;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Depression Prediction Application</h1>
+    <hr>
+    {% if result %}
+        <h1>{{result}}</h1>
+    {% endif %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <label for="sex">Sex:</label>
+        <select name="sex" id="sex">
+            <option value="sex">Male</option>
+            <option value="sex">Female</option>
+        </select>
+        <br><br>
+
+        Age <input type="number" step="any" name="age" required style="margin-left: 21px;"><br><br>
+
+        <label for="married">Married</label>
+        <select name="married" id="married">
+            <option value="married">Male</option>
+            <option value="married">Female</option>
+        </select>
+        <br><br>
+
+        Number of children <input type="number" step="any" name="number_of_children" required><br><br>
+
+        Total Members <input type="number" step="any" name="total_members" required><br><br>
+
+        Asset Value <input type="number" step="any" name="asset_value" required><br><br>
+
+        Living Expenses <input type="number" step="any" name="living_expenses" required><br><br>
+
+        <label for="income">Do you have a stream of income?</label>
+        <select name="income" id="income">
+            <option value="income">Yes</option>
+            <option value="income">No</option>
+        </select>
+        <br><br>
+
+        Investment <input type="number" step="any" name="investment" required><br><br>
+
+        <input type="submit" style="background-color: pink; padding: 20px; border-radius: 10px;"><br>
+    </form>
+</body>
+</html>
