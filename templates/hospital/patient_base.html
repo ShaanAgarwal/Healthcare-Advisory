@@ -30,9 +30,7 @@
 				color: white;
 			}
 
-			/*---------------------------------------
-       Social section
-    -----------------------------------------*/
+			/*---------------------------------------Social section-----------------------------------------*/
 			footer {
 				padding: 0px 0px 0px 0px;
 				background-color: black;
@@ -58,7 +56,7 @@
 			}
 
 			.fa-facebook {
-				background: #3b5998;
+				background: lightgreen;
 				color: white;
 				margin-top: 30px;
 			}
@@ -69,7 +67,7 @@
 			}
 
 			.fa-twitter {
-				background: #55acee;
+				background: lightgreen;
 				color: white;
 			}
 
@@ -91,7 +89,7 @@
 			}
 
 			.menu {
-				background: #5bc995;
+				background: lightgreen;
 				height: 100vh;
 				width: 240px;
 				position: fixed;
@@ -267,26 +265,22 @@
 		<nav class="menu" tabindex="0">
 			<div class="smartphone-menu-trigger"></div>
 			<header class="avatar">
-				<img src="{% static patient.profile_pic.url %}" alt="Profile Pic" />
+				<img src="{% static patient.profile_pic.url %}" alt="Profile Pic" style="border-radius: 50%; width: 150px; height: 150px;">
 				<br /><br />
-				<h6>Patient</h6>
+				<h3>Patient</h3>
 				<h2>{{request.user.first_name}}</h2>
 			</header>
 			<ul>
 				<li tabindex="0" class="icon-dashboard">
-					<a
-						style="color: white; text-decoration: none"
-						href="/patient-dashboard"
-						><span>Dashboard</span></a
-					>
+					<a style=" color: red; text-decoration: none" href="/patient-dashboard"><span>Dashboard</span></a>
 				</li>
 				<li tabindex="0" class="icon-calendar">
-					<a style="color: pink; text-decoration: none" href="/patient-appointment"><span>Appointments</span></a>
+					<a style="color: red; text-decoration: none" href="/patient-appointment"><span>Appointments</span></a>
 				</li>
 				<li tabindex="0" class="icon-users">
-					<a style="color: white; text-decoration: none" href="/patient-discharge"><span>Discharge</span></a>
+					<a style="color: red; text-decoration: none" href="/patient-discharge"><span>Discharge</span></a>
 				</li>
-
+<!-- 
 				<li tabindex="0" class="icon-users">
 					<a style="color: white; text-decoration: none" href="/stroke-prediction"><span>Stroke Prediction</span></a>
 				</li>
@@ -294,14 +288,14 @@
 					<a style="color: white; text-decoration: none" href="/fetal-health-prediction"><span>Fetal Health Prediction</span></a>
 				</li> 
 				<li tabindex="0" class="icon-users">
+					<a style="color: white; text-decoration: none" href="/stress-level-prediction"><span>Stress Level Prediction</span></a>
+				</li> 
+				<li tabindex="0" class="icon-users">
 					<a style="color: white; text-decoration: none" href="/lung-cancer-prediction"><span>Lung Cancer Prediction</span></a>
 				</li> 
 				<li tabindex="0" class="icon-users">
 					<a style="color: white; text-decoration: none" href="/diabetes-prediction"><span>Diabetes Prediction</span></a>
-				</li> 
-				<li tabindex="0" class="icon-users">
-					<a style="color: white; text-decoration: none" href="/depression-prediction"><span>Depression Prediction</span></a>
-				</li> 
+				</li>  -->
 			</ul>
 		</nav>
 		<main>
