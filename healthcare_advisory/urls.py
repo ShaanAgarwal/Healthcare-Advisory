@@ -87,7 +87,6 @@ urlpatterns +=[
     path('heart-disease-prediction', views.heart_disease_prediction, name='heart-disease-prediction'),
     path('stroke-prediction', views.stroke_prediction, name='heart-disease-prediction'),
     path('fetal-health-prediction', views.fetal_health_prediction, name='fetal-health-prediction'),
-    path('stress-level-prediction', views.stress_prediction, name='stress-level-prediction'),
     path('lung-cancer-prediction', views.lung_prediction, name='lung-cancer-prediction'),
     path('diabetes-prediction', views.diabetes_prediction, name='diabetes-prediction'),
 ]

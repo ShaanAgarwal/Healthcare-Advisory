@@ -43,7 +43,6 @@ class Migration(migrations.Migration):
                                                           ('Fetal Health Specialist','Fetal Health Specialist'),
                                                           ('Heart Disease Specialist','Heart Disease Specialist'),
                                                           ('Lung Cancer Specialist','Lung Cancer Specialist'),
-                                                          ('Psychatrist','Psychatrist'),
                                                           ('Stroke Specialist','Stroke Specialist')], default='Breast Cancer Specialist', max_length=50)),
                 ('status', models.BooleanField(default=False)),
                 ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),

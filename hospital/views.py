@@ -718,7 +718,6 @@ model_breast = load('./savedmodel/breast_model.joblib')
 model_heart = load('./savedmodel/heart_model.joblib')
 model_stroke = load('./savedmodel/stroke_model.joblib')
 model_fetal = load('./savedmodel/fetal_model.joblib')
-model_stress = load('./savedmodel/stress_model.joblib')
 model_lung = load('./savedmodel/lung_model.joblib')
 model_diabetes = load('./savedmodel/diabetes_model.joblib')
 
@@ -813,23 +812,6 @@ def stroke_prediction(request):
             y_pred = 'Less Chances of Stroke'
         return render(request, 'hospital/stroke-prediction.html', {'result' : y_pred})
     return render(request, 'hospital/stroke-prediction.html', )
-
-@login_required(login_url='patientlogin')
-@user_passes_test(is_patient)
-def stress_prediction(request):
-    if request.method == 'POST':
-        humidity = float(request.POST['humidity'])
-        temperature = float(request.POST['temperature'])
-        stepcount = float(request.POST['stepcount'])
-        y_pred = model_stress.predict([[humidity, temperature, stepcount]])
-        if y_pred[0] == 0:
-            y_pred = 'Stress Level Is Low.'
-        elif y_pred[0] == 1:
-            y_pred = 'Stress Level is medium'
-        else: 
-            y_pred = 'Stress Level Is High'
-        return render(request, 'hospital/stress-level-detection.html', {'result' : y_pred})
-    return render(request, 'hospital/stress-level-detection.html', )
 
 @login_required(login_url='patientlogin')
 @user_passes_test(is_patient)
