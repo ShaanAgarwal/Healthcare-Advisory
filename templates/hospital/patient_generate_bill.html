@@ -132,7 +132,7 @@
 						<td>
 							Patient Name : {{name}}<br />
 							Patient Contact : {{mobile}}<br />
-							Patient Addres : {{address}}<br />
+							Patient Address : {{address}}<br />
 						</td>
 
 						<td>
@@ -161,13 +161,13 @@
 			{% csrf_token %}
 
 			<tr class="item">
-				<td>Room Charge (Per Day)</td>
+				<td>Account Charge (Per Day)</td>
 
 				<td>
 					<input
 						type="number"
 						name="roomCharge"
-						placeholder="In Dollars"
+						placeholder=""
 						value=""
 					/>
 				</td>
@@ -180,7 +180,7 @@
 					<input
 						type="number"
 						name="doctorFee"
-						placeholder="In Dollars"
+						placeholder=""
 						value=""
 					/>
 				</td>
@@ -193,7 +193,7 @@
 					<input
 						type="number"
 						name="medicineCost"
-						placeholder="In Dollars"
+						placeholder=""
 						value=""
 					/>
 				</td>
@@ -206,7 +206,7 @@
 					<input
 						type="number"
 						name="OtherCharge"
-						placeholder="In Dollars"
+						placeholder=""
 						value=""
 					/>
 				</td>
