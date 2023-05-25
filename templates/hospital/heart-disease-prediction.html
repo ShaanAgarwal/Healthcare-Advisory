@@ -25,18 +25,43 @@
     <form action="" method="POST">
         {% csrf_token %}
         Age(in years)  <input type="number" step="any" name="age" required style="margin-left: 83px;"><br><br>
-        Sex  <input type="number"step="any" name="sex" required style="margin-left: 147px;"><br><br>
-        Chest Pain  <input type="number" step="any" name="cp" required style="margin-left: 103px;"><br><br>
+
+        <label for="sex">Sex:</label>
+        <select name="sex" id="sex">
+            <option value="sex">Male</option>
+            <option value="sex">Female</option>
+        </select>
+        <br><br>
+
+        <label for="cp">Chest Pain Type:</label>
+        <select name="cp" id="cp">
+            <option value="cp">Typical Angina</option>
+            <option value="cp">Atypical Angina</option>
+            <option value="cp">Non-Anginal Pain</option>
+            <option value="cp">Asymptomatic</option>
+        </select>
+        <br><br>
+
         Resting Blood Pressure  <input type="number" step="any" name="trestbps" required style="margin-left: 21px;"><br><br>
-        Serum Cholestrol in mg/dl  <input type="number" step="any" name="chol" required style="margin-left: ;"><br><br>
-        Fasting Blood Sugar > 120 mg/dl  <input type="number" step="any" name="fbs" required style="margin-left: ;"><br><br>
-        Resting Electrocardiographic results  <input type="number" step="any" name="restecg" required style="margin-left: ;"><br><br>
-        Maximum Heart Rate Achieved  <input type="number" step="any" name="thalach" required style="margin-left: ;"><br><br>
-        Exercise Induced Angina  <input type="number" step="any" name="exang" required style="margin-left: ;"><br><br>
-        ST Depression Induced By Exercise Relative To Rest  <input type="number" step="any" name="oldpeak" required style="margin-left: ;"><br><br>
-        Slope Of The Peak Exercise ST Segment  <input type="number" step="any" name="slope" required style="margin-left: ;"><br><br>
-        Number Of Major Vessels (0-3) coloured by flourosopy  <input type="number" step="any" name="ca" required style="margin-left: ;"><br><br>
-        Defect  <input type="number" step="any" name="thal" required style="margin-left: ;"><br><br>
+
+        Serum Cholestrol in mg/dl  <input type="number" step="any" name="chol" required><br><br>
+
+        Fasting Blood Sugar > 120 mg/dl  <input type="number" step="any" name="fbs" required><br><br>
+
+        Resting Electrocardiographic results  <input type="number" step="any" name="restecg" required><br><br>
+
+        Maximum Heart Rate Achieved  <input type="number" step="any" name="thalach" required><br><br>
+
+        Exercise Induced Angina  <input type="number" step="any" name="exang" required><br><br>
+
+        ST Depression Induced By Exercise Relative To Rest  <input type="number" step="any" name="oldpeak" required ><br><br>
+
+        Slope Of The Peak Exercise ST Segment  <input type="number" step="any" name="slope" required ><br><br>
+
+        Number Of Major Vessels (0-3) coloured by flourosopy  <input type="number" step="any" name="ca" required><br><br>
+
+        Thalium  <input type="number" step="any" name="thal" required><br><br>
+
         <input type="submit" style="background-color: pink; padding: 20px; border-radius: 10px;"><br>
     </form>
 </body>

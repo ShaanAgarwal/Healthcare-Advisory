@@ -771,8 +771,20 @@ def breast_cancer_prediction(request):
 def heart_disease_prediction(request):
     if request.method == 'POST':
         age = float(request.POST['age'])
-        sex = float(request.POST['sex'])
-        cp = float(request.POST['cp'])
+        sex = (request.POST['sex'])
+        if sex == "Male":
+            sex = 1
+        else:
+            sex = 0
+        cp = (request.POST['cp'])
+        if cp == "Typical Angina":
+            cp = 1
+        elif cp == "ATypical Angina":
+            cp = 2
+        elif cp == "Non-Anginal Pain":
+            cp = 3
+        else:
+            cp = 4
         trestbps = float(request.POST['trestbps'])
         chol = float(request.POST['chol'])
         fbs = float(request.POST['fbs'])
@@ -795,16 +807,52 @@ def heart_disease_prediction(request):
 @user_passes_test(is_patient)
 def stroke_prediction(request):
     if request.method == 'POST':
-        gender = float(request.POST['gender'])
+        gender = (request.POST['gender'])
+        if gender == "Male":
+            gender = 1
+        else:
+            gender = 0
         age = float(request.POST['age'])
-        hypertension = float(request.POST['hypertension'])
-        heart = float(request.POST['heart'])
-        marriage = float(request.POST['marriage'])
-        work = float(request.POST['work'])
-        residence = float(request.POST['residence'])
+        hypertension = (request.POST['hypertension'])
+        if hypertension == "Yes":
+            hypertension = 1
+        else:
+            hypertension = 0
+        heart = (request.POST['heart'])
+        if heart == "Yes":
+            heart = 1
+        else:
+            heart = 0
+        marriage = (request.POST['marriage'])
+        if marriage == "Yes":
+            marriage = 1
+        else:
+            marriage = 0
+        work = (request.POST['work'])
+        if work == "Children":
+            work = 1
+        elif work == "Government Job":
+            work = 2
+        elif work == "Never Worked":
+            work = 3
+        elif work == "Private":
+            work = 4
+        else:
+            work = 5
+        residence = (request.POST['residence'])
+        if residence == "Rural":
+            residence = 1
+        else:
+            residence = 2
         glucose = float(request.POST['glucose'])
         bmi = float(request.POST['bmi'])
-        smoking = float(request.POST['smoking'])
+        smoking = (request.POST['smoking'])
+        if smoking == "Formerly Smoke":
+            smoking = 1
+        elif smoking == "Never Smoked":
+            smoking = 2
+        else:
+            smoking = 3
         y_pred = model_stroke.predict([[gender, age, hypertension, heart, marriage, work, residence, glucose, bmi, smoking]])
         if y_pred[0] == 0:
             y_pred = 'Stroke can happen.'
@@ -838,19 +886,71 @@ def diabetes_prediction(request):
 def lung_prediction(request):
     if request.method == 'POST':
         age = float(request.POST['age'])
-        smoking = float(request.POST['smoking'])
-        yellow_fingers = float(request.POST['yellow_fingers'])
-        anxiety = float(request.POST['anxiety'])
-        peer_pressure = float(request.POST['peer_pressure'])
-        chronic_disease = float(request.POST['chronic_disease'])
-        fatigue = float(request.POST['fatigue'])
-        allergy = float(request.POST['allergy'])
-        wheezing = float(request.POST['wheezing'])
-        alcohol_consuming = float(request.POST['alcohol_consuming'])
-        coughing = float(request.POST['coughing'])
-        shortness_of_breath = float(request.POST['shortness_of_breath'])
-        swallowing_difficulty = float(request.POST['swallowing_difficulty'])
-        chest_pain = float(request.POST['chest_pain'])
+        smoking = (request.POST['smoking'])
+        if smoking == "Yes":
+            smoking = 2
+        else:
+            smoking = 1
+        yellow_fingers = (request.POST['yellow_fingers'])
+        if yellow_fingers == "Yes":
+            yellow_fingers = 2
+        else:
+            yellow_fingers = 1
+        anxiety = (request.POST['anxiety'])
+        if anxiety == "Yes":
+            anxiety = 2
+        else:
+            anxiety = 1
+        peer_pressure = (request.POST['peer_pressure'])
+        if peer_pressure == "Yes":
+            peer_pressure = 2
+        else:
+            peer_pressure = 1
+        chronic_disease = (request.POST['chronic_disease'])
+        if chronic_disease == "Yes":
+            chronic_disease = 2
+        else:
+            chronic_disease = 1
+        fatigue = (request.POST['fatigue'])
+        if fatigue == "Yes":
+            fatigue = 2
+        else:
+            fatigue = 1
+        allergy = (request.POST['allergy'])
+        if allergy == "Yes":
+            allergy = 2
+        else:
+            allergy = 1
+        wheezing = (request.POST['wheezing'])
+        if wheezing == "Yes":
+            wheezing = 2
+        else:
+            wheezing = 1
+        alcohol_consuming = (request.POST['alcohol_consuming'])
+        if alcohol_consuming == "Yes":
+            alcohol_consuming = 2
+        else:
+            alcohol_consuming = 1
+        coughing = (request.POST['coughing'])
+        if coughing == "Yes":
+            coughing = 2
+        else:
+            coughing = 1
+        shortness_of_breath = (request.POST['shortness_of_breath'])
+        if shortness_of_breath == "Yes":
+            shortness_of_breath = 2
+        else:
+            shortness_of_breath = 1
+        swallowing_difficulty = (request.POST['swallowing_difficulty'])
+        if swallowing_difficulty == "Yes":
+            swallowing_difficulty = 2
+        else:
+            swallowing_difficulty = 1
+        chest_pain = (request.POST['chest_pain'])
+        if chest_pain == "Yes":
+            chest_pain = 2
+        else:
+            chest_pain = 1
         y_pred = model_lung.predict([[age, smoking, yellow_fingers, anxiety, peer_pressure, chronic_disease, fatigue, allergy, wheezing,
                                         alcohol_consuming, coughing, shortness_of_breath, swallowing_difficulty, chest_pain]])
         if y_pred[0] == 'YES':

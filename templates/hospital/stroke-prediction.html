@@ -24,17 +24,67 @@
 
     <form action="" method="POST">
         {% csrf_token %}
-        Gender  <input type="number" step="any" name="gender" required style="margin-left: 83px;"><br><br>
+        <label for="gender">Choose your Gender:</label>
+        <select name="gender" id="gender">
+            <option value="gender">Male</option>
+            <option value="gender">Female</option>
+        </select>
+        <br><br>
+
         Age  <input type="number" step="any" name="age" required style="margin-left: 83px;"><br><br>
-        Hypertension  <input type="number" step="any" name="hypertension" required style="margin-left: 83px;"><br><br>
-        Heart Disease  <input type="number" step="any" name="heart" required style="margin-left: 83px;"><br><br>
-        Ever Married  <input type="number" step="any" name="marriage" required style="margin-left: 83px;"><br><br>
-        Work Type  <input type="number" step="any" name="work" required style="margin-left: 83px;"><br><br>
-        Residence Type  <input type="number" step="any" name="residence" required style="margin-left: 83px;"><br><br>
+
+        <label for="hypertension">Do you have hypertension?:</label>
+        <select name="hypertension" id="hypertension">
+            <option value="hypertension">No</option>
+            <option value="hypertension">Yes</option>
+        </select>
+        <br><br>
+
+        <label for="heart">Do you have Heart Disease?:</label>
+        <select name="heart" id="heart">
+            <option value="heart">No</option>
+            <option value="heart">Yes</option>
+        </select>
+        <br><br>
+
+        <label for="marriage">Are you married?:</label>
+        <select name="marriage" id="marriage">
+            <option value="marriage">No</option>
+            <option value="marriage">Yes</option>
+        </select>
+        <br><br>
+
+        <label for="work">What is your work type?:</label>
+        <select name="work" id="work">
+            <option value="work">Children</option>
+            <option value="work">Government Job</option>
+            <option value="work">Never Worked</option>
+            <option value="work">Private</option>
+            <option value="work">Self-Employed</option>
+        </select>
+        <br><br>
+
+        <label for="residence">Residence Type:</label>
+        <select name="residence" id="residence">
+            <option value="residence">Rural</option>
+            <option value="residence">Urban</option>
+        </select>
+        <br><br>
+
         Average Glucose Level  <input type="number" step="any" name="glucose" required style="margin-left: 83px;"><br><br>
+
         BMI  <input type="number" step="any" name="bmi" required style="margin-left: 83px;"><br><br>
-        Smoking Status  <input type="number" step="any" name="smoking" required style="margin-left: 83px;"><br><br>
+
+        <label for="hypertension">What is your smoking status?:</label>
+        <select name="smoking" id="smoking">
+            <option value="smoking">Formerly Smoked</option>
+            <option value="smoking">Never Smoked</option>
+            <option value="smoking">Regular Smoke</option>
+        </select>
+        <br><br>
+
         <input type="submit" style="background-color: pink; padding: 20px; border-radius: 10px;"><br>
+
     </form>
 </body>
 </html>
