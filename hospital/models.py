@@ -6,7 +6,6 @@ departments=[('Breast Cancer Specialist','Breast Cancer Specialist'),
 ('Fetal Health Specialist','Fetal Health Specialist'),
 ('Heart Disease Specialist','Heart Disease Specialist'),
 ('Lung Cancer Specialist','Lung Cancer Specialist'),
-('Psychatrist','Psychatrist'),
 ('Stroke Specialist','Stroke Specialist')
 ]
 
