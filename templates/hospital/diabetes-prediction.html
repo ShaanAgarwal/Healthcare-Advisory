@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <style>
+        .bg{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body class="bg">
+    <h1>Diabetes Prediction Application</h1>
+    <hr>
+    {% if result %}
+        <h1>{{result}}</h1>
+    {% endif %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        Pregnancies : <input type="number" step="any" name="pregnancies" required style="margin-left: 54px;"><br><br>
+        Glucose : <input type="number" step="any" name="glucose" required style="margin-left: 54px;"><br><br>
+        Blood Pressure : <input type="number" step="any" name="blood_pressure" required style="margin-left: 54px;"><br><br>
+        Skin Thickness : <input type="number" step="any" name="skin_thickness" required style="margin-left: 54px;"><br><br>
+        Insulin : <input type="number" step="any" name="insulin" required style="margin-left: 54px;"><br><br>
+        BMI : <input type="number" step="any" name="bmi" required style="margin-left: 54px;"><br><br>
+        Diabetes Pedigree Function : <input type="number" step="any" name="diabetes_pedigree_function" required style="margin-left: 54px;"><br><br>
+        Age : <input type="number" step="any" name="age" required style="margin-left: 54px;"><br><br>
+        <input type="submit" style="border-radius: 10px; background-color: pink;">
+
+    </form>
+</body>
+</html>

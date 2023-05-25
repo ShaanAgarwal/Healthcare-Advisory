@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Cancer Prediction</title>
+    <style>
+        .bg{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body class="bg">
+    <h1>Lung Cancer Prediction Application</h1>
+    <hr>
+    {% if result %}
+        <h1>{{result}}</h1>
+    {% endif %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        Age : <input type="number" step="any" name="age" required style="margin-left: 54px;"><br><br>
+        Smoking : <input type="number" step="any" name="smoking" required style="margin-left: 54px;"><br><br>
+        Yellow Fingers : <input type="number" step="any" name="yellow_fingers" required style="margin-left: 54px;"><br><br>
+        Anxiety : <input type="number" step="any" name="anxiety" required style="margin-left: 54px;"><br><br>
+        Peer Pressure : <input type="number" step="any" name="peer_pressure" required style="margin-left: 54px;"><br><br>
+        Chronic Disease : <input type="number" step="any" name="chronic_disease" required style="margin-left: 54px;"><br><br>
+        Fatigue : <input type="number" step="any" name="fatigue" required style="margin-left: 54px;"><br><br>
+        Allergy : <input type="number" step="any" name="allergy" required style="margin-left: 54px;"><br><br>
+        Wheezing : <input type="number" step="any" name="wheezing" required style="margin-left: 54px;"><br><br>
+        Alcohol Consuming : <input type="number" step="any" name="alcohol_consuming" required style="margin-left: 54px;"><br><br>
+        Coughing : <input type="number" step="any" name="coughing" required style="margin-left: 54px;"><br><br>
+        Shortness Of Breath : <input type="number" step="any" name="shortness_of_breath" required style="margin-left: 54px;"><br><br>
+        Swallowing Difficulty : <input type="number" step="any" name="swallowing_difficulty" required style="margin-left: 54px;"><br><br>
+        Chest Pain : <input type="number" step="any" name="chest_pain" required style="margin-left: 54px;"><br><br>
+        <input type="submit" style="border-radius: 10px; background-color: pink;">
+
+    </form>
+</body>
+</html>

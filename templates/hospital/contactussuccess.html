@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/slicknav.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/flaticon.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/gijgo.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/animate.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/animated-headline.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/fontawesome-all.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/themify-icons.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/slick.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/nice-select.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
+		<title>MEDICALMINDS</title>
+		<style media="screen">
+
+			* {
+				background-color: #93c572;
+			}
+
+			body {
+				background-color: #93c572;
+			}
+
+			nav {
+				width: 90%;
+				margin: auto;
+				padding-top: 0px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			nav ul {
+				display: flex;
+				list-style-type: none;
+			}
+			nav ul li {
+				margin: 0 5px;
+			}
+			nav ul a {
+				text-decoration: none;
+				padding: 0.3rem 1.3rem;
+				font-size: 17px;
+				font-weight: bold;
+				color: #494234;
+				position: relative;
+				z-index: 1;
+			}
+			nav ul a::after {
+				content: "";
+				width: 0%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0px;
+				border-radius: 20px;
+				background-color: #c8ebb1;
+				z-index: -1;
+				transition: 0.5s;
+			}
+			nav ul a:hover:after {
+				width: 100%;
+			}
+
+			.jumbotron {
+				margin-bottom: 0px;
+				background-color: #93c572;
+			}
+
+			.jumbotron h1 {
+				text-align: center;
+			}
+
+			.lead {
+				font-size: 25px;
+				margin-left: 500px;
+				margin-top: 20px;
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/services">Services</a></li>
+				<li><a href="/aboutus">About</a></li>
+				<li><a href="/contactus">Contact</a></li>
+				<li><a href="/adminlogin">Admin</a></li>
+				<li><a href="/adminlogin">Doctor</a></li>
+				<li><a href="/patientlogin">Patient</a></li>
+			</ul>
+			<img src="{% static "images/index/logo-new.png" %}" alt=""/>
+		</nav>
+
+		<br /><br />
+		<div class="jumbotron">
+			<h1 class="display-4">Your message has been sent successfully !</h1>
+			<p class="lead">We will respond to your feedback soon</p>
+		</div>
+	</body>
+</html>

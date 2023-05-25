@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroke Prediction</title>
+
+    <style>
+
+        body {
+            background-color: pink;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Stroke Prediction Application</h1>
+    <hr>
+    {% if result %}
+        <h1>{{result}}</h1>
+    {% endif %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        Gender  <input type="number" step="any" name="gender" required style="margin-left: 83px;"><br><br>
+        Age  <input type="number" step="any" name="age" required style="margin-left: 83px;"><br><br>
+        Hypertension  <input type="number" step="any" name="hypertension" required style="margin-left: 83px;"><br><br>
+        Heart Disease  <input type="number" step="any" name="heart" required style="margin-left: 83px;"><br><br>
+        Ever Married  <input type="number" step="any" name="marriage" required style="margin-left: 83px;"><br><br>
+        Work Type  <input type="number" step="any" name="work" required style="margin-left: 83px;"><br><br>
+        Residence Type  <input type="number" step="any" name="residence" required style="margin-left: 83px;"><br><br>
+        Average Glucose Level  <input type="number" step="any" name="glucose" required style="margin-left: 83px;"><br><br>
+        BMI  <input type="number" step="any" name="bmi" required style="margin-left: 83px;"><br><br>
+        Smoking Status  <input type="number" step="any" name="smoking" required style="margin-left: 83px;"><br><br>
+        <input type="submit" style="background-color: pink; padding: 20px; border-radius: 10px;"><br>
+    </form>
+</body>
+</html>

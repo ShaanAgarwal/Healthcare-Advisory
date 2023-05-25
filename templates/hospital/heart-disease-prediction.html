@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+
+    <style>
+
+        body {
+            background-color: pink;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Heart Disease Prediction Application</h1>
+    <hr>
+    {% if result %}
+        <h1>{{result}}</h1>
+    {% endif %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        Age(in years)  <input type="number" step="any" name="age" required style="margin-left: 83px;"><br><br>
+        Sex  <input type="number"step="any" name="sex" required style="margin-left: 147px;"><br><br>
+        Chest Pain  <input type="number" step="any" name="cp" required style="margin-left: 103px;"><br><br>
+        Resting Blood Pressure  <input type="number" step="any" name="trestbps" required style="margin-left: 21px;"><br><br>
+        Serum Cholestrol in mg/dl  <input type="number" step="any" name="chol" required style="margin-left: ;"><br><br>
+        Fasting Blood Sugar > 120 mg/dl  <input type="number" step="any" name="fbs" required style="margin-left: ;"><br><br>
+        Resting Electrocardiographic results  <input type="number" step="any" name="restecg" required style="margin-left: ;"><br><br>
+        Maximum Heart Rate Achieved  <input type="number" step="any" name="thalach" required style="margin-left: ;"><br><br>
+        Exercise Induced Angina  <input type="number" step="any" name="exang" required style="margin-left: ;"><br><br>
+        ST Depression Induced By Exercise Relative To Rest  <input type="number" step="any" name="oldpeak" required style="margin-left: ;"><br><br>
+        Slope Of The Peak Exercise ST Segment  <input type="number" step="any" name="slope" required style="margin-left: ;"><br><br>
+        Number Of Major Vessels (0-3) coloured by flourosopy  <input type="number" step="any" name="ca" required style="margin-left: ;"><br><br>
+        Defect  <input type="number" step="any" name="thal" required style="margin-left: ;"><br><br>
+        <input type="submit" style="background-color: pink; padding: 20px; border-radius: 10px;"><br>
+    </form>
+</body>
+</html>

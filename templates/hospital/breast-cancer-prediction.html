@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Prediction</title>
+    <style>
+        .bg{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body class="bg">
+    <h1>Breast Cancer Prediction Application</h1>
+    <hr>
+    {% if result %}
+        <h1>Classified Breast Cancer is {{result}}</h1>
+    {% endif %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        Mean Radius : <input type="number" step="any" name="mean_radius" required style="margin-left: 54px;"><br><br>
+        Mean Texture : <input type="number" step="any" name="mean_texture" required><br><br>
+        Mean Perimeter : <input type="number"step="any" name="mean_perimeter" required style="margin-left: 37px;"><br><br>
+        Mean Area : <input type="number" step="any" name="mean_area" required style="margin-left: 68px;"><br><br>
+        Mean Smoothness : <input type="number" step="any" name="mean_smoothness" required><br><br>
+        Mean Compactness : <input type="number" step="any" name="mean_compactness" required style="margin-left: 14px;"><br><br>
+        Mean Concavity : <input type="number" step="any" name="mean_concavity" required><br><br>
+        Mean Concave Points : <input type="number" step="any" name="mean_concave_points" required><br><br>
+        Mean Symmetry : <input type="number" step="any" name="mean_symmetry" required><br><br>
+        Mean Fractal Dimension : <input type="number" step="any" name="mean_fractal_dimension" required><br><br>
+        Radius Error : <input type="number" step="any" name="radius_error" required><br><br>
+        Texture Error : <input type="number" step="any" name="texture_error" required><br><br>
+        Perimeter Error : <input type="number" step="any" name="perimeter_error" required><br><br>
+        Area Error : <input type="number" step="any" name="area_error" required><br><br>
+        Smoothness Error : <input type="number" step="any" name="smoothness_error" required><br><br>
+        Compactness Error : <input type="number" step="any" name="compactness_error" required><br><br>
+        Concavity Error : <input type="number" step="any" name="concavity_error" required><br><br>
+        Concave Points Error : <input type="number" step="any" name="concave_points_error" required><br><br>
+        Symmetry Error : <input type="number" step="any" name="symmetry_error" required><br><br>
+        Fractal Dimension Error : <input type="number" step="any" name="fractal_dimension_error" required><br><br>
+        Worst Radius : <input type="number" step="any" name="worst_radius" required><br><br>
+        Worst Texture : <input type="number" step="any" name="worst_texture" required><br><br>
+        Worst Perimeter : <input type="number" step="any" name="worst_perimeter" required><br><br>
+        Worst Area : <input type="number" step="any" name="worst_area" required><br><br>
+        Worst Smoothness : <input type="number" step="any" name="worst_smoothness" required><br><br>
+        Worst Compactness : <input type="number" step="any" name="worst_compactness" required><br><br>
+        Worst Concavity : <input type="number" step="any" name="worst_concavity" required><br><br>
+        Worst Concave Points : <input type="number" step="any" name="worst_concave_points" required><br><br>
+        Worst Symmetry : <input type="number" step="any" name="worst_symmetry" required><br><br>
+        Worst Fractal Dimension : <input type="number" step="any" name="worst_fractal_dimension" required><br><br>
+        <input type="submit" style="border-radius: 10px; background-color: pink;">
+
+    </form>
+</body>
+</html>
