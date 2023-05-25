@@ -1035,9 +1035,6 @@ def fetal_health_prediction(request):
         return render(request, 'hospital/fetal-health-prediction.html', {'result' : y_pred})
     return render(request, 'hospital/fetal-health-prediction.html', )
 
-def aboutus_view(request):
-    return render(request,'hospital/aboutus.html')
-
 def contactus_view(request):
     sub = forms.ContactusForm()
     if request.method == 'POST':
