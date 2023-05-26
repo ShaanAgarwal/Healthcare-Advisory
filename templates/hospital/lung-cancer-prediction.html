@@ -6,47 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lung Cancer Prediction</title>
     <style>
-                body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
+        .bg{
             background-color: pink;
-            background-image: url('https://media.istockphoto.com/id/530196490/photo/3d-illustration-of-lungs-medical-concept.jpg?s=612x612&w=0&k=20&c=JWac3KM2myfIS5O8vcMXXnBlSQiOGeN7h2OZUvzwgPI=');
-            background-size: cover;
-            background-position: center;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            max-width: 400px;
-            width: 100%;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background-color: white;
-        }
-
-        form label {
-            margin-bottom: 10px;
-        }
-
-        form input,
-        form select {
-            margin-bottom: 15px;
-        }
-
-        form input[type="submit"] {
-            background-color: pink;
-            border: none;
-            border-radius: 10px;
-            padding: 10px 20px;
-            cursor: pointer;
         }
     </style>
 </head>
@@ -59,100 +20,21 @@
 
     <form action="" method="POST">
         {% csrf_token %}
-
         Age : <input type="number" step="any" name="age" required style="margin-left: 54px;"><br><br>
-
-        <label for="smoking">Smoking?:</label>
-        <select name="smoking" id="smoking">
-            <option value="smoking">No</option>
-            <option value="smoking">Yes</option>
-        </select>
-        <br><br>
-
-        <label for="yellow_fingers">Do you have yellow fingers?:</label>
-        <select name="yellow_fingers" id="yellow_fingers">
-            <option value="yellow_fingers">No</option>
-            <option value="yellow_fingers">Yes</option>
-        </select>
-        <br><br>
-
-        <label for="anxiety">Do you have anxiety?:</label>
-        <select name="anxiety" id="anxiety">
-            <option value="anxiety">No</option>
-            <option value="anxiety">Yes</option>
-        </select>
-        <br><br>
-
-        <label for="peer_pressure">Are you suffering from peer pressure?:</label>
-        <select name="peer_pressure" id="peer_pressure">
-            <option value="peer_pressure">No</option>
-            <option value="peer_pressure">Yes</option>
-        </select>
-        <br><br>
-
-        <label for="chronic_disease">Do you have any chronic disease?:</label>
-        <select name="chronic_disease" id="chronic_disease">
-            <option value="chronic_disease">No</option>
-            <option value="chronic_disease">Yes</option>
-        </select>
-        <br><br>
-
-        <label for="fatigue">Do you have fatigue?:</label>
-        <select name="fatigue" id="fatigue">
-            <option value="fatigue">No</option>
-            <option value="fatigue">Yes</option>
-        </select>
-        <br><br>
-
-        <label for="allergy">Do you have any allergies?:</label>
-        <select name="allergy" id="allergy">
-            <option value="allergy">No</option>
-            <option value="allergy">Yes</option>
-        </select>
-        <br><br>
-
-        <label for="wheezing">Do you suffer from wheezing?:</label>
-        <select name="wheezing" id="wheezing">
-            <option value="wheezing">No</option>
-            <option value="wheezing">Yes</option>
-        </select>
-        <br><br>
-
-        <label for="alcohol_consuming">Do you consume alcohol?:</label>
-        <select name="alcohol_consuming" id="alcohol_consuming">
-            <option value="alcohol_consuming">No</option>
-            <option value="alcohol_consuming">Yes</option>
-        </select>
-        <br><br>
-
-        <label for="coughing">Do you have cough?:</label>
-        <select name="coughing" id="coughing">
-            <option value="coughing">No</option>
-            <option value="coughing">Yes</option>
-        </select>
-        <br><br>
-
-        <label for="shortness_of_breath">Do you experience shortness of breath?:</label>
-        <select name="shortness_of_breath" id="shortness_of_breath">
-            <option value="shortness_of_breath">No</option>
-            <option value="shortness_of_breath">Yes</option>
-        </select>
-        <br><br>
-
-        <label for="swallowing_difficulty">Do you have swallowing difficulty?:</label>
-        <select name="swallowing_difficulty" id="swallowing_difficulty">
-            <option value="swallowing_difficulty">No</option>
-            <option value="swallowing_difficulty">Yes</option>
-        </select>
-        <br><br>
-
-        <label for="chest_pain">Do you suffer from chest pain?:</label>
-        <select name="chest_pain" id="chest_pain">
-            <option value="chest_pain">No</option>
-            <option value="chest_pain">Yes</option>
-        </select>
-        <br><br>
-
+        <h2> Enter 1 for yes and Enter 2 for no</h2>
+        Smoking : <input type="number" step="any" name="smoking" required style="margin-left: 54px;"><br><br>
+        Yellow Fingers : <input type="number" step="any" name="yellow_fingers" required style="margin-left: 54px;"><br><br>
+        Anxiety : <input type="number" step="any" name="anxiety" required style="margin-left: 54px;"><br><br>
+        Peer Pressure : <input type="number" step="any" name="peer_pressure" required style="margin-left: 54px;"><br><br>
+        Chronic Disease : <input type="number" step="any" name="chronic_disease" required style="margin-left: 54px;"><br><br>
+        Fatigue : <input type="number" step="any" name="fatigue" required style="margin-left: 54px;"><br><br>
+        Allergy : <input type="number" step="any" name="allergy" required style="margin-left: 54px;"><br><br>
+        Wheezing : <input type="number" step="any" name="wheezing" required style="margin-left: 54px;"><br><br>
+        Alcohol Consuming : <input type="number" step="any" name="alcohol_consuming" required style="margin-left: 54px;"><br><br>
+        Coughing : <input type="number" step="any" name="coughing" required style="margin-left: 54px;"><br><br>
+        Shortness Of Breath : <input type="number" step="any" name="shortness_of_breath" required style="margin-left: 54px;"><br><br>
+        Swallowing Difficulty : <input type="number" step="any" name="swallowing_difficulty" required style="margin-left: 54px;"><br><br>
+        Chest Pain : <input type="number" step="any" name="chest_pain" required style="margin-left: 54px;"><br><br>
         <input type="submit" style="border-radius: 10px; background-color: pink;">
 
     </form>
