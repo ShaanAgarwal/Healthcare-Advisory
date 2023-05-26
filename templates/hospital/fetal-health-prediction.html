@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<label><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,8 +7,12 @@
     <title>Fetal Health Prediction</title>
 
     <style>
-
+        label{
+            width: 150px;
+            /* display: inline-block; */
+        }
         body {
+            
             background-color: pink;
         }
 
@@ -24,27 +28,27 @@
 
     <form action="" method="POST">
         {% csrf_token %}
-        Baseline Value  <input type="number" step="any" name="baseline_value" required style="margin-left: 83px;"><br><br>
-        Accelerations  <input type="number" step="any" name="accelerations" required style="margin-left: 83px;"><br><br>
-        Fetal Movement  <input type="number" step="any" name="fetal_movement" required style="margin-left: 83px;"><br><br>
-        Uterine Contractions  <input type="number" step="any" name="uterine_contractions" required style="margin-left: 83px;"><br><br>
-        Light Decelerations  <input type="number" step="any" name="light_decelerations" required style="margin-left: 83px;"><br><br>
-        Severe Decelerations  <input type="number" step="any" name="severe_decelerations" required style="margin-left: 83px;"><br><br>
-        Prolongued Decelerations  <input type="number" step="any" name="prolongued_decelerations" required style="margin-left: 83px;"><br><br>
-        Abnormal Short Term Variability  <input type="number" step="any" name="abnormal_short_term_variability" required style="margin-left: 83px;"><br><br>
-        Mean Value Of Short Term Variability  <input type="number" step="any" name="mean_value_of_short_term_variability" required style="margin-left: 83px;"><br><br>
-        Percentage Of Time With Abnormal Long Term Variability  <input type="number" step="any" name="percentage_of_time_with_abnormal_long_term_variability" required style="margin-left: 83px;"><br><br>
-        Mean Value Of Long Term Variability  <input type="number" step="any" name="mean_value_of_long_term_variability" required style="margin-left: 83px;"><br><br>
-        Histogram Width  <input type="number" step="any" name="histogram_width" required style="margin-left: 83px;"><br><br>
-        Histogram Min  <input type="number" step="any" name="histogram_min" required style="margin-left: 83px;"><br><br>
-        Histogram Max  <input type="number" step="any" name="histogram_max" required style="margin-left: 83px;"><br><br>
-        Histogram Number Of Peaks  <input type="number" step="any" name="histogram_number_of_peaks" required style="margin-left: 83px;"><br><br>
-        Histogram Number Of Zeroes  <input type="number" step="any" name="histogram_number_of_zeroes" required style="margin-left: 83px;"><br><br>
-        Histogram Mode  <input type="number" step="any" name="histogram_mode" required style="margin-left: 83px;"><br><br>
-        Histogram Mean  <input type="number" step="any" name="histogram_mean" required style="margin-left: 83px;"><br><br>
-        Histogram Median  <input type="number" step="any" name="histogram_median" required style="margin-left: 83px;"><br><br>
-        Histogram Variance  <input type="number" step="any" name="histogram_variance" required style="margin-left: 83px;"><br><br>
-        Histogram Tendency  <input type="number" step="any" name="histogram_tendency" required style="margin-left: 83px;"><br><br>
+        <label>Baseline Value</label> <input type="number" step="any" name="baseline_value";><br><br>
+        <label>Accelerations</label> : <input type="number" step="any" name="accelerations";><br><br>
+        <label>Fetal Movement</label> : <input type="number" step="any" name="fetal_movement";><br><br>
+        <label>Uterine Contractions</label> : <input type="number" step="any" name="uterine_contractions";><br><br>
+        <label>Light Decelerations</label> : <input type="number" step="any" name="light_decelerations";><br><br>
+        <label>Severe Decelerations</label> : <input type="number" step="any" name="severe_decelerations";><br><br>
+        <label>Prolongued Decelerations</label> : <input type="number" step="any" name="prolongued_decelerations";><br><br>
+        <label>Abnormal Short Term Variability</label> : <input type="number" step="any" name="abnormal_short_term_variability";><br><br>
+        <label>Mean Value Of Short Term Variability</label> : <input type="number" step="any" name="mean_value_of_short_term_variability";><br><br>
+        <label>Percentage Of Time With Abnormal Long Term Variability</label> : <input type="number" step="any" name="percentage_of_time_with_abnormal_long_term_variability";"><br><br>
+        <label>Mean Value Of Long Term Variability</label> : <input type="number" step="any" name="mean_value_of_long_term_variability";><br><br>
+        <label>Histogram Width</label> : <input type="number" step="any" name="histogram_width";"><br><br>
+        <label>Histogram Min</label> : <input type="number" step="any" name="histogram_min";"><br><br>
+        <label>Histogram Max</label> : <input type="number" step="any" name="histogram_max";"><br><br>
+        <label>Histogram Number Of Peaks</label> : <input type="number" step="any" name="histogram_number_of_peaks";"><br><br>
+        <label>Histogram Number Of Zeroes</label> : <input type="number" step="any" name="histogram_number_of_zeroes";"><br><br>
+        <label>Histogram Mode</label> : <input type="number" step="any" name="histogram_mode";"><br><br>
+        <label>Histogram Mean</label> : <input type="number" step="any" name="histogram_mean";"><br><br>
+        <label>Histogram Median</label> : <input type="number" step="any" name="histogram_median";"><br><br>
+        <label>Histogram Variance</label> : <input type="number" step="any" name="histogram_variance";"><br><br>
+        <label>Histogram Tendency</label> : <input type="number" step="any" name="histogram_tendency";"><br><br>
         <input type="submit" style="background-color: pink; padding: 20px; border-radius: 10px;"><br>
     </form>
 </body>

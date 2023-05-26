@@ -7,11 +7,47 @@
     <title>Heart Disease Prediction</title>
 
     <style>
+        label {
+            display: inline-block;
+            width: 200px;
+            margin-bottom: 10px;
+        }
 
         body {
             background-color: pink;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: url('https://media.istockphoto.com/id/530196490/photo/3d-illustration-of-lungs-medical-concept.jpg?s=612x612&w=0&k=20&c=JWac3KM2myfIS5O8vcMXXnBlSQiOGeN7h2OZUvzwgPI=');
+            background-size: cover;
+            background-position: center;
         }
 
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        form input[type="number"] {
+            width: 100px;
+        }
+
+        form input[type="submit"] {
+            background-color: pink;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
     </style>
 
 </head>
@@ -26,7 +62,7 @@
         {% csrf_token %}
         Age(in years)  <input type="number" step="any" name="age" required style="margin-left: 83px;"><br><br>
 
-        <label for="sex">Sex:</label>
+        <label style="width: 150px;" for="sex">Sex:</label>
         <select name="sex" id="sex">
             <option value="sex">Male</option>
             <option value="sex">Female</option>
@@ -42,25 +78,25 @@
         </select>
         <br><br>
 
-        Resting Blood Pressure  <input type="number" step="any" name="trestbps" required style="margin-left: 21px;"><br><br>
+        <label>Resting Blood Pressure<label>  <input type="number" step="any" name="trestbps" required style="margin-left: 21px;"><br><br>
 
-        Serum Cholestrol in mg/dl  <input type="number" step="any" name="chol" required><br><br>
+        <label>Serum Cholestrol in mg/dl<label>  <input type="number" step="any" name="chol" required><br><br>
 
-        Fasting Blood Sugar > 120 mg/dl  <input type="number" step="any" name="fbs" required><br><br>
+        <label>Fasting Blood Sugar > 120 mg/dl<label>  <input type="number" step="any" name="fbs" required><br><br>
 
-        Resting Electrocardiographic results  <input type="number" step="any" name="restecg" required><br><br>
+        <label>Resting Electrocardiographic results<label>  <input type="number" step="any" name="restecg" required><br><br>
 
-        Maximum Heart Rate Achieved  <input type="number" step="any" name="thalach" required><br><br>
+        <label>Maximum Heart Rate Achieved<label>  <input type="number" step="any" name="thalach" required><br><br>
 
-        Exercise Induced Angina  <input type="number" step="any" name="exang" required><br><br>
+        <label>Exercise Induced Angina<label>  <input type="number" step="any" name="exang" required><br><br>
 
-        ST Depression Induced By Exercise Relative To Rest  <input type="number" step="any" name="oldpeak" required ><br><br>
+        <label>ST Depression Induced By Exercise Relative To Rest<label>  <input type="number" step="any" name="oldpeak" required ><br><br>
 
-        Slope Of The Peak Exercise ST Segment  <input type="number" step="any" name="slope" required ><br><br>
+        <label>Slope Of The Peak Exercise ST Segment<label>  <input type="number" step="any" name="slope" required ><br><br>
 
-        Number Of Major Vessels (0-3) coloured by flourosopy  <input type="number" step="any" name="ca" required><br><br>
+        <label>Number Of Major Vessels (0-3) coloured by flourosopy<label>  <input type="number" step="any" name="ca" required><br><br>
 
-        Thalium  <input type="number" step="any" name="thal" required><br><br>
+        <label>Thalium</label>  <input type="number" step="any" name="thal" required><br><br>
 
         <input type="submit" style="background-color: pink; padding: 20px; border-radius: 10px;"><br>
     </form>
